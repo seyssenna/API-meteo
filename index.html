@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SCRIPT GRAPHIQUE -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <!-- ................. -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   crossorigin=""/>
+   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
+   
+    <title>Application de météo</title>
+</head>
+<body>
+    <nav>
+        <h1>LA MÉTÉO DU TURFU <i class="fas fa-cloud-rain"></i></h1>
+        <input type="text" id="address" placeholder="Search your city">
+        <div class="resultSearch">
+            <div class="close"><i id="close" class="fas fa-times"></i></div>
+            <div id="placeList"></div>
+        </div>
+    </nav>
+    <main>
+        <!-- AFFICHAGE MÉTÉO ACTUELLE -->
+        <div id="weatherDisplay"></div>
+        <!-- FIN AFFICHAGE MÉTÉO ACTUELLE -->
+
+        <!-- AFFICHAGE GRAPHIQUE PREVISIONS -->
+        <div class="graphContainer">
+            <canvas id="myChart"></canvas>
+        </div>
+        <!-- FIN AFFICHAGE GRAPHIQUE PREVISIONS -->
+        <div id="placemap">
+            <div id="mapid"></div>
+        </div>
+    </main>
+    <footer>
+        <p>LE THI HUONG <i style ="color: #1E6F94" class="fas fa-map-marked-alt"></i></p> <span>X</span> <p>MILLET MATHIEU <i style ="color: #1E6F94" class="fas fa-cloud-sun"></i></p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
